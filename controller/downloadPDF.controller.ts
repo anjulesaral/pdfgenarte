@@ -143,14 +143,6 @@ const generatePDF = async (req:Request, res:Response) => {
 
     let templateHTML = sampleTemplate(transactionData);
 
-    // if(service === "transactions"){
-    //   templateHTML = transactionReportTemplate(JSON.parse(data.data));
-    // }else if (service === "profile") {
-    //   templateHTML = employeeProfileTemplate(JSON.parse(data.data));
-    // }else if (service === "usertransaction") {
-    //   templateHTML = transactionInvoiceTemplate(JSON.parse(data.data));
-    // }
-
     const browser = await puppeteer.launch({
       headless: "new",
       args: ["--no-sandbox", "--disable-setuid-sandbox"],
